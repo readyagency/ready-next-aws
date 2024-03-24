@@ -10,9 +10,9 @@ export default function Navbar() {
     const [profile, setProfile] = useState(false);
     return (
         <>
-            <div className="bg-gray-200 h-full w-full">
+            <div className="fixed top-0 z-40 w-full">
                 {/* Code block starts */}
-                <nav className="bg-white shadow xl:block hidden">
+                <nav className="bg-opacity-30 shadow-md xl:block hidden backdrop-filter backdrop-blur-lg dark:bg-white">
                     <div className="mx-auto container px-6 py-2 xl:py-0">
                         <div className="flex items-center justify-between">
                             <div className="inset-y-0 left-0 flex items-center xl:hidden">
@@ -221,7 +221,7 @@ export default function Navbar() {
                     </div>
                 </nav>
                 <nav>
-                    <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40">
+                    <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center fixed top-0 z-40 shadow-md bg-opacity-30 backdrop-blur-lg dark:bg-white">
                         <div className="w-32">
                             <Image
                                 src={LogoRD}
@@ -274,9 +274,9 @@ export default function Navbar() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <ul className="f-m-m">
-                                            <a className="cursor-pointer">
-                                                <li className="text-gray-800 pt-10">
+                                        <div className="f-m-m">
+                                            <Link className="cursor-pointer" href="#">
+                                                <div className="text-gray-800 pt-10">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-amber-500">
                                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -289,10 +289,10 @@ export default function Navbar() {
                                                         </div>
                                                         <p className="text-amber-500 xl:text-base text-base ml-3">Dashboard</p>
                                                     </div>
-                                                </li>
-                                            </a>
-                                            <a className="cursor-pointer">
-                                                <li className="text-gray-800 pt-8">
+                                                </div>
+                                            </Link>
+                                            <Link className="cursor-pointer" href="#">
+                                                <div className="text-gray-800 pt-8">
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center">
                                                             <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
@@ -304,10 +304,10 @@ export default function Navbar() {
                                                             <p className="text-gray-800 xl:text-base text-base ml-3">Products</p>
                                                         </div>
                                                     </div>
-                                                </li>
-                                            </a>
-                                            <a className="cursor-pointer">
-                                                <li className="text-gray-800 pt-8">
+                                                </div>
+                                            </Link>
+                                            <Link className="cursor-pointer" href="#">
+                                                <div className="text-gray-800 pt-8">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
                                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-compass" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -318,8 +318,8 @@ export default function Navbar() {
                                                         </div>
                                                         <p className="text-gray-800 xl:text-base text-base ml-3">Performance</p>
                                                     </div>
-                                                </li>
-                                            </a>
+                                                </div>
+                                            </Link>
                                             <li className="text-gray-800 pt-8 cursor-pointer">
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center">
@@ -335,7 +335,7 @@ export default function Navbar() {
                                                     </div>
                                                 </div>
                                             </li>
-                                        </ul>
+                                        </div>
                                     </div>
                                     <div className="w-full pt-4">
                                         <div className="flex justify-center mb-4 w-full">
@@ -347,7 +347,7 @@ export default function Navbar() {
                                                         <line x1={21} y1={21} x2={15} y2={15} />
                                                     </svg>
                                                 </div>
-                                                <input className="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500  pl-10 py-2" type="text" placeholder="Search" />
+                                                <input id="Search" className="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500  pl-10 py-2" type="text" placeholder="Search" />
                                             </div>
                                         </div>
                                         <div className="border-t border-gray-300">

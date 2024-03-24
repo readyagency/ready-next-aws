@@ -1,12 +1,17 @@
-import type { Metadata } from "next";
+import type { Viewport } from 'next'
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: '#1 SEO & Digital Marketing Online Thuê ngoài HCM | Ready Agency',
-  description: 'Ready Agency doanh nghiệp Marketing thuê ngoài hiệu quả cho chiến lược tiếp thị doanh nghiệp. Báo giá dịch vụ phòng marketing thuê ngoài tại HCM cam kết doanh số. Liên hệ Hotline 0901 800 110',
+export const metadata = {
+  metadataBase: new URL('https://webnhanhgiare.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'vi': '/vi',
+    },
+  },
   openGraph: {
     title: '#1 SEO & Digital Marketing Online Thuê ngoài HCM | Ready Agency',
     description: 'Ready Agency doanh nghiệp Marketing thuê ngoài hiệu quả cho chiến lược tiếp thị doanh nghiệp. Báo giá dịch vụ phòng marketing thuê ngoài tại HCM cam kết doanh số. Liên hệ Hotline 0901 800 110',
@@ -23,44 +28,17 @@ export const metadata: Metadata = {
     ],
     locale: 'vi_VN',
   },
-  icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
-  },
-  alternates: {
-    canonical: 'https://ready-agency.com',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 2,
-  },
-  verification: {
-    google: 'google',
-    yandex: 'yandex',
-    yahoo: 'yahoo',
-    other: {
-      me: ['contact@ready-agency.com', 'https://ready-agency.com'],
-    },
-  },
+}
+
+export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'orange' },
   ],
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({
@@ -70,7 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className} >
+        {children}
+      </body>
     </html>
   );
 }
