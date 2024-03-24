@@ -21,7 +21,10 @@ function HeroBanner() {
                         Ready Agency <br className="lg:hidden xl:hidden"/>
                         cung cấp giải pháp
                     </h1>
-                    <div className="text-amber-500 dark:text-amber-500 mt-8 lg:mt-2 xl:mt-2">
+                    <h2 className="hidden">Thiết kế website</h2>
+                    <h2 className="hidden">Digital Marketing</h2>
+                    <h2 className="hidden">Media Production</h2>
+                    <span className="text-amber-500 dark:text-amber-500 mt-8 lg:mt-2 xl:mt-2">
                     <ReactTyped
                         strings={[
                             "Thiết kế website",
@@ -34,7 +37,7 @@ function HeroBanner() {
                         className="uppercase font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl"
                         loop
                     />
-                    </div>
+                    </span>
                     <p className="mt-8 text-gray-600 dark:text-gray-300">
                         Tiếp thị hiệu quả là chìa khóa chinh phục mục tiêu kinh doanh. Với sự thấu hiểu và tận tâm, Ready Agency co.,Ltd tự hào mang đến những giải pháp toàn diện về Thiết kế Website; Digital Marketing & Media Production cho khách hàng!
                     </p>
